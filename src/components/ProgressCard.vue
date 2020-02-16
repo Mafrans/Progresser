@@ -16,6 +16,8 @@
                         rounded
                         :height="height"
                         :value="value"
+                        :color="color"
+                        :indeterminate="indeterminate"
                     >
                         <span class="caption" v-text="label" />
                     </v-progress-linear>
@@ -29,6 +31,8 @@
                 rounded
                 :height="height"
                 :value="value"
+                :color="color"
+                :indeterminate="indeterminate"
             >
                 <span class="caption" v-text="label" />
             </v-progress-linear>
@@ -62,6 +66,14 @@ export default {
         tooltip: {
             default: "",
             type: String,
+        },
+        color: {
+            default: "blue",
+            type: String,
+        },
+        indeterminate: {
+            default: false,
+            type: Boolean,
         },
     },
 };

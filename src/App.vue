@@ -11,6 +11,7 @@
                     :label="bar.label"
                     :height="bar.height"
                     :tooltip="bar.tooltip"
+                    :color="bar.color"
                 />
             </v-container>
         </v-content>
@@ -36,5 +37,9 @@ export default {
             },
         ],
     }),
+
+    beforeMount() {
+        
+    }
 };
 </script>
