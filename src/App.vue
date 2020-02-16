@@ -1,12 +1,16 @@
 <template>
   <v-app>
-    <progress-card
-      v-for="(bar, i) in bars"
-      :key="i"
-      :title="bar.title"
-      :subtitle="bar.subtitle"
-      :value="bar.value"
-    />
+    <v-content>
+      <v-container>
+        <progress-card
+          v-for="(bar, i) in bars"
+          :key="i"
+          :title="bar.title"
+          :subtitle="bar.subtitle"
+          :value="bar.value"
+        />
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
