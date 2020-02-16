@@ -13,6 +13,10 @@
                     :tooltip="bar.tooltip"
                     :color="bar.color"
                 />
+
+                <progress-card
+                    v-if="bars.length === 0"
+                />
             </v-container>
         </v-content>
     </v-app>
@@ -29,17 +33,15 @@ export default {
     },
 
     data: () => ({
-        bars: [
-            {
-                title: "Custom Project",
-                subtitle: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam`,
-                value: 30,
-            },
-        ],
+        bars: [],
     }),
 
     beforeMount() {
-        
+        const input = window.location.search.substring(1);
+        const decoded = decodeURIComponent(input);
+        try {
+            this.bars = JSON.parse(decoded);
+        } catch(e) { /* do nothing */ }
     }
 };
 </script>
