@@ -10,6 +10,7 @@
                     :value="bar.value"
                     :label="bar.label"
                     :height="bar.height"
+                    :tooltip="bar.tooltip"
                 />
             </v-container>
         </v-content>

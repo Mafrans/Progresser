@@ -9,9 +9,29 @@
             </v-list-item-content>
         </v-list-item>
         <div class="bar">
-            <v-progress-linear rounded :height="height" :value="value">{{
-                label
-            }}</v-progress-linear>
+            <v-tooltip bottom v-if="tooltip">
+                <template v-slot:activator="{ on }">
+                    <v-progress-linear
+                        v-on="on"
+                        rounded
+                        :height="height"
+                        :value="value"
+                    >
+                        <span class="caption" v-text="label" />
+                    </v-progress-linear>
+                </template>
+                <span>{{ tooltip }}</span>
+            </v-tooltip>
+
+            <v-progress-linear
+                v-if="!tooltip"
+                v-on="on"
+                rounded
+                :height="height"
+                :value="value"
+            >
+                <span class="caption" v-text="label" />
+            </v-progress-linear>
         </div>
     </v-card>
 </template>
@@ -38,6 +58,10 @@ export default {
         height: {
             default: 10,
             type: Number,
+        },
+        tooltip: {
+            default: "",
+            type: String,
         },
     },
 };
