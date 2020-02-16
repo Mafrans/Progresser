@@ -27,7 +27,6 @@
 
             <v-progress-linear
                 v-if="!tooltip"
-                v-on="on"
                 rounded
                 :height="height"
                 :value="value"
