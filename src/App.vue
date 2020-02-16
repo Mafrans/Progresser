@@ -8,6 +8,8 @@
                     :title="bar.title"
                     :subtitle="bar.subtitle"
                     :value="bar.value"
+                    :label="bar.label"
+                    :height="bar.height"
                 />
             </v-container>
         </v-content>
