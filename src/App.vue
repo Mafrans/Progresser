@@ -12,6 +12,7 @@
                     :height="bar.height"
                     :tooltip="bar.tooltip"
                     :color="bar.color"
+                    :indeterminate="bar.indeterminate"
                 />
 
                 <progress-card

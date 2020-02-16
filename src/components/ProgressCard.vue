@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+    <v-card class="card">
         <v-list-item two-line>
             <v-list-item-content>
                 <v-list-item-title class="headline mb-1">
@@ -81,5 +81,16 @@ export default {
 <style scoped>
 .bar {
     padding: 0 16px 16px 16px;
+}
+
+.card {
+    margin-bottom: 16px;
+}
+</style>
+
+<style>
+.v-progress-linear__background {
+    width: 100% !important;
+    left: 0 !important;
 }
 </style>
