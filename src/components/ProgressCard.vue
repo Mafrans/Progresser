@@ -82,15 +82,14 @@ export default {
 .bar {
     padding: 0 16px 16px 16px;
 }
-
-.card {
-    margin-bottom: 16px;
-}
 </style>
 
 <style>
 .v-progress-linear__background {
     width: 100% !important;
     left: 0 !important;
+}
+.v-card {
+    margin-bottom: 16px;
 }
 </style>
